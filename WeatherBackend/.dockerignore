@@ -1,0 +1,14 @@
+/vendor/
+/node_modules/
+.env
+.git
+.github
+docker-compose.yml
+Dockerfile
+README.md
+storage/logs/*
+storage/framework/sessions/*
+storage/framework/cache/data/*
+storage/framework/views/*
+public/storage
+bootstrap/cache/*.php

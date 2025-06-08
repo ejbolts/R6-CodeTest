@@ -55,13 +55,7 @@
     composer install
     ```
 
-3.  **Create your environment file:**
-    Copy the example environment file.
-    ```bash
-    cp .env.example .env
-    ```
-
-4.  **Configure your `.env` file:**
+3.  **Create and Configure your `.env` file:**
     Open the `.env` file and set the following variables.
     ```dotenv
     # Set your local development URL
@@ -72,12 +66,12 @@
     WEATHERBIT_API_URL=https://api.weatherbit.io/v2.0/
     ```
 
-5.  **Generate an application key:**
+4.  **Generate an application key:**
     ```bash
     php artisan key:generate
     ```
 
-6.  **Configure your local web server** (e.g. in Laragon) to ensure the document root for `weatherbackend.test` points to the `/public` directory of the project.
+5.  **Configure your local web server** (e.g. in Laragon) to ensure the document root for `weatherbackend.test` points to the `/public` directory of the project.
 
 ### 2. Frontend (React)
 

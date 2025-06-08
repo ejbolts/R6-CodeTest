@@ -6,13 +6,11 @@
 -   PHP >= 8.2
 -   Composer
 -   Node.js & npm
--   A local development environment like Laragon, Valet, or Herd. (These instructions assume a setup similar to Laragon where `http://Weatherbackend.test` points to the Laravel project).
+-   A local development environment like Laragon, Valet, or Herd. 
 ---
 
 
 ## Design Decisions & Assumptions
-
-This section outlines the key architectural choices and assumptions made during development.
 
 1. **Decoupled (Headless) Architecture vs. Inertia.js**:
     - **Decision**: I chose to build the Laravel backend as a pure, stateless API and the frontend as a completely separate React SPA. This is in contrast to using a tool like Inertia.js, which creates a more tightly-coupled "modern monolith".
@@ -127,6 +125,10 @@ The application includes a console command to fetch and display the 5-day foreca
 A scheduled task is defined in `app/Console/console.php` to run the `forecast` command daily at 7:00 AM and append the output to `storage/logs/daily-forecast.log`.
 On a production server, this would be enabled by adding the following single Cron entry:
 
+
 ```cron
 * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
 ```
+
+
+**Side note** i plan on containerising the Laravel backend and run on my current ec2 with subdomain url that i would add to readme soon, so that is why there is a docker file.
